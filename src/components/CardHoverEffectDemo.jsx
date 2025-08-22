@@ -20,7 +20,7 @@ export const projects = [
     // cardImage: MobileAppDev,
     title: "Mobile App Development",
     description: "Android & iOS applications tailored to your needs.",
-    link: "https://stripe.com",
+    link: "mobile-app-development",
   },
   {
     LottieAnimation: Publishing,
@@ -28,22 +28,19 @@ export const projects = [
 
     title: "Website Development",
     description: "Custom websites using PHP, HTML, and CSS.",
-    link: "https://netflix.com",
+    link: "web-development",
   },
   {
     LottieAnimation: WordpressDev,
-    // cardImage: MobileAppDev,
 
     title: "WordPress Services",
     description: "Comprehensive WordPress solutions for your site.",
-    link: "https://google.com",
+    link: "wordpress-development",
   },
   {
-    // cardImage: MobileAppDev,
-
     LottieAnimation: WebDevelopment,
     title: "Publishing Services",
     description: "End-to-end publishing support for your projects.",
-    link: "https://meta.com",
+    link: "publishing",
   },
 ];

@@ -9,6 +9,7 @@ import {
 } from "react";
 import { cn } from "../../lib/util";
 import { AnimatePresence, motion } from "motion/react";
+import Link from "next/link";
 
 // TypeScript interfaces
 interface LottieRef {
@@ -172,30 +173,32 @@ export const HoverEffect: React.FC<HoverEffectProps> = ({
         }
 
         return (
-          <div
-            key={item.link || `item-${idx}`}
-            ref={(el) => {
-              cardRefs.current[idx] = el;
-            }}
-            className="relative group block p-2 h-full w-full cursor-pointer"
-            onMouseEnter={() => handleMouseEnter(idx)}
-            onMouseLeave={handleMouseLeave}
-          >
-            <Card>
-              <LottieAnimation>
-                <Component
-                  ref={(ref: LottieRef) => {
-                    lottieRefs.current[idx] = ref;
-                  }}
-                  autoplay={false}
-                  loop={false}
-                  isHovered={hoveredIndex === idx}
-                />
-              </LottieAnimation>
-              <CardTitle>{item.title}</CardTitle>
-              <CardDescription>{item.description}</CardDescription>
-            </Card>
-          </div>
+          <Link href={item.link}>
+            <div
+              key={item.link || `item-${idx}`}
+              ref={(el) => {
+                cardRefs.current[idx] = el;
+              }}
+              className="relative group block p-2 h-full w-full cursor-pointer"
+              onMouseEnter={() => handleMouseEnter(idx)}
+              onMouseLeave={handleMouseLeave}
+            >
+              <Card>
+                <LottieAnimation>
+                  <Component
+                    ref={(ref: LottieRef) => {
+                      lottieRefs.current[idx] = ref;
+                    }}
+                    autoplay={false}
+                    loop={false}
+                    isHovered={hoveredIndex === idx}
+                  />
+                </LottieAnimation>
+                <CardTitle>{item.title}</CardTitle>
+                <CardDescription>{item.description}</CardDescription>
+              </Card>
+            </div>
+          </Link>
         );
       })}
 
