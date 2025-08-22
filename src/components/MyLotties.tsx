@@ -3,7 +3,7 @@
 import animationData from "./Lotties/WebDevelopment.json";
 import PublishingData from "./Lotties/publishing.json";
 import WordpressData from "./Lotties/WordpressDeveloper.json";
-import MobileAppData from "./Lotties/Developer.json";
+import MobileAppData from "./Lotties/AppDevelopment.json";
 
 import { useLottie } from "lottie-react";
 
