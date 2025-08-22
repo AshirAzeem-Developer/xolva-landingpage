@@ -1,6 +1,7 @@
 import React from "react";
 import { Smartphone, Monitor, BookOpen } from "lucide-react";
 import { FeatureCardProps } from "./types";
+import { CardHoverEffectDemo } from "../components/CardHoverEffectDemo";
 
 const FeatureCard: React.FC<FeatureCardProps> = ({
   icon: Icon,
@@ -30,12 +31,13 @@ const ServicesSection: React.FC = () => (
         </span>
       </h2>
       <p className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
-        We deliver exceptional software solutions and consulting services
-        tailored to meet your business objectives
+        We bridge the gap between legacy solutions and updated, higher-quality
+        solutions. Our talented engineers and designers collaborate with
+        business partners at multiple levels to fulfill their requirements.
       </p>
     </div>
 
-    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    {/* <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
       <FeatureCard
         icon={Smartphone}
         title="Mobile App Development"
@@ -54,7 +56,8 @@ const ServicesSection: React.FC = () => (
         description="End-to-end publishing support for your projects with professional design and distribution."
         delay="0.5s"
       />
-    </div>
+    </div> */}
+    <CardHoverEffectDemo />
   </section>
 );
 
