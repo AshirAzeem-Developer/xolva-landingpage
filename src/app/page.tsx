@@ -6,6 +6,7 @@ import { GlobeDemo } from "../components/GlobeDemo";
 import HeroSection from "../components/HeroSection";
 import ServicesSection from "../components/ServicesSection";
 import BackgroundElements from "../components/BackgroundElements";
+import { GlowingEffectDemo } from "../components/GlowingEffect";
 
 export default function Home() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -26,6 +27,7 @@ export default function Home() {
         <main className="relative pt-24 pb-12 px-6">
           <div className="container mx-auto max-w-7xl">
             <HeroSection isLoaded={isLoaded} />
+            <GlowingEffectDemo />
             <ServicesSection />
           </div>
         </main>
