@@ -1,10 +1,11 @@
 import { HoverEffect } from "../components/ui/card-hover-effect";
 import {
-  MobielAppDev,
   Publishing,
   WebDevelopment,
   WordpressDev,
+  MobileAppDev,
 } from "./MyLotties";
+// import MobileAppDev from "../../public/images/MobileAppDev.jpg";
 
 export function CardHoverEffectDemo() {
   return (
@@ -15,13 +16,15 @@ export function CardHoverEffectDemo() {
 }
 export const projects = [
   {
-    LottieAnimation: MobielAppDev,
+    LottieAnimation: MobileAppDev,
+    // cardImage: MobileAppDev,
     title: "Mobile App Development",
     description: "Android & iOS applications tailored to your needs.",
     link: "https://stripe.com",
   },
   {
     LottieAnimation: Publishing,
+    // cardImage: MobileAppDev,
 
     title: "Website Development",
     description: "Custom websites using PHP, HTML, and CSS.",
@@ -29,12 +32,15 @@ export const projects = [
   },
   {
     LottieAnimation: WordpressDev,
+    // cardImage: MobileAppDev,
 
     title: "WordPress Services",
     description: "Comprehensive WordPress solutions for your site.",
     link: "https://google.com",
   },
   {
+    // cardImage: MobileAppDev,
+
     LottieAnimation: WebDevelopment,
     title: "Publishing Services",
     description: "End-to-end publishing support for your projects.",
