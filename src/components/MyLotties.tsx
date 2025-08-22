@@ -283,7 +283,7 @@ const LottiePlayer = forwardRef<LottiePlayerRef, LottiePlayerProps>(
       return <LoadingSpinner />;
     }
 
-    return <Lottie {...lottieProps} />;
+    return <Lottie {...lottieProps} loop />;
   }
 );
 
