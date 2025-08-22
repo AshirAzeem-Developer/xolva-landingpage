@@ -13,14 +13,14 @@ const HeroSection: React.FC<HeroSectionProps> = ({ isLoaded }) => (
         isLoaded ? "translate-x-0 opacity-100" : "-translate-x-20 opacity-0"
       }`}
     >
-      <div className="space-y-6">
+      <div className="space-y-4">
         <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-white/10 to-gray-300/20 border border-white/20 text-sm font-medium text-white">
           <Zap className="w-4 h-4 mr-2" />
           Professional Development Solutions
         </div>
 
         <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
-          <span className="bg-gradient-to-r from-white via-gray-200 to-gray-300 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-white via-gray-200 to-gray-300 bg-clip-text text-transparent font-posterama">
             XOLVA
           </span>
           <br />
@@ -33,15 +33,14 @@ const HeroSection: React.FC<HeroSectionProps> = ({ isLoaded }) => (
         </h1>
       </div>
 
-      <p className="text-lg sm:text-xl text-gray-300 leading-relaxed max-w-lg">
+      <p className="text-lg sm:text-lg text-gray-300 leading-relaxed max-w-lg">
         We are an independent software development company offering cutting-edge
         solutions through the world's latest technologies. From mobile apps to
         enterprise systems, we deliver innovation that transforms businesses.
       </p>
 
       <CTAButtons />
-
-      <div className="flex flex-wrap items-center gap-6 text-sm text-gray-400">
+      <div className="flex flex-wrap items-center gap-4 text-sm text-gray-400">
         <StatusIndicator
           icon={<div className="w-2 h-2 bg-white rounded-full animate-pulse" />}
           text="100+ Projects Delivered"

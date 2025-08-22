@@ -1,5 +1,5 @@
-import React from "react";
-import { FloatingOrbProps } from "./types";
+import React, { useEffect, useState } from "react";
+import { FloatingOrbProps, Particle } from "./types";
 
 const FloatingOrb: React.FC<FloatingOrbProps> = ({
   size,
@@ -48,22 +48,42 @@ const GridPattern: React.FC = () => (
   </div>
 );
 
-const ParticleField: React.FC = () => (
-  <div className="absolute inset-0 overflow-hidden pointer-events-none">
-    {Array.from({ length: 70 }, (_, i) => (
-      <div
-        key={i}
-        className="absolute w-[2px] h-[2px] bg-white/30 rounded-full animate-twinkle"
-        style={{
-          left: `${Math.random() * 100}%`,
-          top: `${Math.random() * 100}%`,
-          animationDelay: `${Math.random() * 4}s`,
-          animationDuration: `${2 + Math.random() * 3}s`,
-        }}
-      />
-    ))}
-  </div>
-);
+const ParticleField: React.FC = () => {
+  // Use state to store the particles, initialized to an empty array
+  const [particles, setParticles] = useState<Particle[]>([]);
+
+  useEffect(() => {
+    // This code will only run on the client-side after the component is mounted
+    const generatedParticles: Particle[] = Array.from(
+      { length: 70 },
+      (_, i) => ({
+        id: i,
+        left: `${Math.random() * 100}%`,
+        top: `${Math.random() * 100}%`,
+        animationDelay: `${Math.random() * 4}s`,
+        animationDuration: `${2 + Math.random() * 3}s`,
+      })
+    );
+    setParticles(generatedParticles);
+  }, []); // The empty dependency array ensures this runs only once
+
+  return (
+    <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      {particles.map((p) => (
+        <div
+          key={p.id}
+          className="absolute w-[2px] h-[2px] bg-white/30 rounded-full animate-twinkle"
+          style={{
+            left: p.left,
+            top: p.top,
+            animationDelay: p.animationDelay,
+            animationDuration: p.animationDuration,
+          }}
+        />
+      ))}
+    </div>
+  );
+};
 
 const BackgroundElements: React.FC = () => (
   <>

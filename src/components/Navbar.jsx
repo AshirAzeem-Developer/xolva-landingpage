@@ -12,14 +12,14 @@ export const Navbar = () => {
 
   return (
     // The main navbar container
-    <nav className="fixed top-0 left-1/2 -translate-x-1/2 z-50 w-[90vw] mt-4 border-[3px] border-slate-100 rounded-lg">
+    <nav className="fixed top-0 left-1/2 -translate-x-1/2 z-50 w-[90vw] mt-4  rounded-3xl">
       {/* A semi-transparent container with blur for a modern "glassmorphism" effect */}
-      <div className="mx-auto w-full  bg-white bg-opacity-80 backdrop-blur-md shadow-lg p-4 transition-all duration-300">
+      <div className="mx-auto w-full  bg-white/10 bg-opacity-80 backdrop-blur-sm shadow-lg p-4 transition-all duration-300 rounded-md">
         {/* Flex container for the navbar content */}
         <div className="flex items-center justify-between">
           {/* Logo/Brand Section */}
           <div className="flex items-center space-x-2">
-            <span className="text-xl font-bold text-gray-800 tracking-wider">
+            <span className="font-posterama text-xl font-bold text-white tracking-wider">
               XOLVA
             </span>
           </div>
@@ -28,25 +28,25 @@ export const Navbar = () => {
           <div className="hidden md:flex space-x-6">
             <a
               href="#"
-              className="text-gray-600 hover:text-gray-800 font-medium transition duration-300"
+              className="text-white hover:text-gray-400 font-medium transition duration-300"
             >
               About
             </a>
             <a
               href="#"
-              className="text-gray-600 hover:text-gray-800 font-medium transition duration-300"
+              className="text-white hover:text-gray-400 font-medium transition duration-300"
             >
               Services
             </a>
             <a
               href="#"
-              className="text-gray-600 hover:text-gray-800 font-medium transition duration-300"
+              className="text-white hover:text-gray-400 font-medium transition duration-300"
             >
               Portfolio
             </a>
             <a
               href="#"
-              className="text-gray-600 hover:text-gray-800 font-medium transition duration-300"
+              className="text-white hover:text-gray-400 font-medium transition duration-300"
             >
               Contact
             </a>

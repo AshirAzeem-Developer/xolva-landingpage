@@ -29,3 +29,10 @@ export interface StatusIndicatorProps {
 export interface HeroSectionProps {
   isLoaded: boolean;
 }
+export interface Particle {
+  id: number;
+  left: string;
+  top: string;
+  animationDelay: string;
+  animationDuration: string;
+}

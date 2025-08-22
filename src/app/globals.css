@@ -3,14 +3,17 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  font-family: var(--font-roboto), system-ui, sans-serif;
+  --font-posterama: "Posterama";
+  font-family: var(--font-posterama), system-ui, sans-serif;
 }
 
 /* You can also create a utility class to use in your components */
 .font-roboto {
   font-family: var(--font-roboto), sans-serif;
 }
-
+.font-posterama {
+  font-family: var(--font-posterama);
+}
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
