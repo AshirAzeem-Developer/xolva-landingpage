@@ -7,6 +7,7 @@ import HeroSection from "../components/HeroSection";
 import ServicesSection from "../components/ServicesSection";
 import BackgroundElements from "../components/BackgroundElements";
 import { GlowingEffectDemo } from "../components/GlowingEffect";
+import RecentProjectsSection from "@/components/RecentProjectsSection";
 
 export default function Home() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -29,6 +30,7 @@ export default function Home() {
             <HeroSection isLoaded={isLoaded} />
             <GlowingEffectDemo />
             <ServicesSection />
+            <RecentProjectsSection />
           </div>
         </main>
       </div>
