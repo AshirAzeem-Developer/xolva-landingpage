@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { useState } from "react";
 
 export const Navbar = () => {
@@ -30,12 +31,12 @@ export const Navbar = () => {
 
           {/* Desktop Navigation Links */}
           <div className="hidden md:flex space-x-6">
-            <a
-              href="#"
+            <Link
+              href="/about"
               className="text-white hover:text-gray-400 font-medium transition duration-300"
             >
               About
-            </a>
+            </Link>
             <a
               href="#"
               className="text-white hover:text-gray-400 font-medium transition duration-300"
