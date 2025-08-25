@@ -173,7 +173,7 @@ export const HoverEffect: React.FC<HoverEffectProps> = ({
         }
 
         return (
-          <Link href={item.link}>
+          <Link href={item.link} key={item.title}>
             <div
               key={item.link || `item-${idx}`}
               ref={(el) => {
