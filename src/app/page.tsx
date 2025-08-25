@@ -8,6 +8,7 @@ import ServicesSection from "../components/ServicesSection";
 import BackgroundElements from "../components/BackgroundElements";
 import { GlowingEffectDemo } from "../components/GlowingEffect";
 import RecentProjectsSection from "@/components/RecentProjectsSection";
+import OurClients from "@/components/OurClients";
 
 export default function Home() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -31,6 +32,7 @@ export default function Home() {
             <GlowingEffectDemo />
             <ServicesSection />
             <RecentProjectsSection />
+            <OurClients />
           </div>
         </main>
       </div>

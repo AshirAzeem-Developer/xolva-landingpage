@@ -23,14 +23,14 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
 
 const ServicesSection: React.FC = () => (
   <section className="mt-32">
-    <div className="text-center mb-16">
+    <div className="text-start mb-16">
       <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
         Our Professional{" "}
         <span className="bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
           Services
         </span>
       </h2>
-      <p className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
+      <p className="text-lg sm:text-xl text-gray-400 max-w-7xl mx-auto leading-relaxed text-start">
         We bridge the gap between legacy solutions and updated, higher-quality
         solutions. Our talented engineers and designers collaborate with
         business partners at multiple levels to fulfill their requirements.
