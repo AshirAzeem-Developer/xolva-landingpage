@@ -24,7 +24,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white overflow-hidden relative">
+      <div className="min-h-screen bg-white text-gray-900 overflow-hidden relative">
         <Navbar />
         <BackgroundElements />
 

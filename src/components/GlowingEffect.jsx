@@ -1,17 +1,44 @@
 "use client";
+import React from "react";
 import { Command, Target } from "lucide-react";
 import { GlowingEffect } from "./ui/glowing-effect";
+
+// This component is a placeholder to make the main component self-contained
+const GridItem = ({ icon, title, description }) => {
+  return (
+    <li className="list-none">
+      <div className="relative h-full rounded-2xl border border-gray-300 bg-white p-2 md:rounded-3xl md:p-3 shadow-md hover:shadow-lg transition-shadow">
+        <GlowingEffect
+          spread={40}
+          glow={true}
+          disabled={false}
+          proximity={64}
+          inactiveZone={0.01}
+        />
+        <div className="relative flex h-full flex-col gap-6 overflow-hidden rounded-xl p-6 md:p-6">
+          <div className="flex flex-col gap-4">
+            <div className="w-fit rounded-lg border border-gray-300 bg-gray-100 p-2">
+              {icon}
+            </div>
+            <h3 className="font-sans text-xl font-semibold text-gray-900 md:text-2xl">
+              {title}
+            </h3>
+            <div>{description}</div>
+          </div>
+        </div>
+      </div>
+    </li>
+  );
+};
 
 export function GlowingEffectDemo() {
   return (
     <ul className="mt-20 grid grid-cols-1 gap-6 md:grid-cols-2">
       <GridItem
-        icon={
-          <Command className="h-10 w-10 text-black dark:text-neutral-400" />
-        }
+        icon={<Command className="h-10 w-10 text-gray-700" />}
         title="IN XOLVA"
         description={
-          <div className="space-y-4 leading-relaxed font-sans text-sm md:text-base text-black dark:text-neutral-200">
+          <div className="space-y-4 leading-relaxed font-sans text-sm md:text-base text-gray-700">
             <p>
               At Xolva, our mission is to empower our clients to achieve or
               surpass their business objectives through bespoke technology
@@ -20,7 +47,7 @@ export function GlowingEffectDemo() {
               partnerships.
             </p>
             <p>By leveraging our diagnose-and-cure approach, Xolva delivers:</p>
-            <ul className="list-disc pl-6 space-y-2 marker:text-blue-500 dark:marker:text-blue-400">
+            <ul className="list-disc pl-6 space-y-2 marker:text-blue-600">
               <li>
                 <strong>High-Quality, Cost-Effective Software Solutions</strong>
                 <br />
@@ -52,10 +79,10 @@ export function GlowingEffectDemo() {
         }
       />
       <GridItem
-        icon={<Target className="h-10 w-10 text-black dark:text-neutral-400" />}
+        icon={<Target className="h-10 w-10 text-gray-700" />}
         title="OBJECTIVE"
         description={
-          <div className="space-y-4 leading-relaxed font-sans text-sm md:text-base text-black dark:text-neutral-200">
+          <div className="space-y-4 leading-relaxed font-sans text-sm md:text-base text-gray-700">
             <p>
               Xolva’s primary objective is to eliminate technological hurdles
               for our clients. With extensive expertise and a cost-effective
@@ -80,30 +107,3 @@ export function GlowingEffectDemo() {
     </ul>
   );
 }
-
-const GridItem = ({ icon, title, description }) => {
-  return (
-    <li className="list-none">
-      <div className="relative h-full rounded-2xl border border-gray-200 dark:border-neutral-700 bg-white dark:bg-neutral-950 p-2 md:rounded-3xl md:p-3 shadow-md hover:shadow-md transition-shadow">
-        <GlowingEffect
-          spread={40}
-          glow={true}
-          disabled={false}
-          proximity={64}
-          inactiveZone={0.01}
-        />
-        <div className="relative flex h-full flex-col gap-6 overflow-hidden rounded-xl p-6 md:p-6">
-          <div className="flex flex-col gap-4">
-            <div className="w-fit rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-neutral-800 p-2">
-              {icon}
-            </div>
-            <h3 className="font-sans text-xl font-semibold text-black md:text-2xl dark:text-white">
-              {title}
-            </h3>
-            <div>{description}</div>
-          </div>
-        </div>
-      </div>
-    </li>
-  );
-};

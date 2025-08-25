@@ -1,5 +1,22 @@
+"use client";
 import React, { useEffect, useState } from "react";
-import { FloatingOrbProps, Particle } from "./types";
+
+// Define the types for the components
+interface FloatingOrbProps {
+  size: string;
+  delay: string;
+  duration: string;
+  x: string;
+  y: string;
+}
+
+interface Particle {
+  id: number;
+  left: string;
+  top: string;
+  animationDelay: string;
+  animationDuration: string;
+}
 
 const FloatingOrb: React.FC<FloatingOrbProps> = ({
   size,
@@ -16,7 +33,8 @@ const FloatingOrb: React.FC<FloatingOrbProps> = ({
 
   return (
     <div
-      className="absolute bg-gradient-to-r from-blue-400/30 via-purple-400/30 to-pink-400/30 rounded-full blur-2xl animate-float"
+      // Changed gradient colors to be darker so they stand out on a white background
+      className="absolute bg-gradient-to-r from-blue-600/30 via-purple-600/30 to-pink-600/30 rounded-full blur-2xl animate-float"
       style={{
         width: sizeMap[size] || "64px",
         height: sizeMap[size] || "64px",
@@ -30,13 +48,14 @@ const FloatingOrb: React.FC<FloatingOrbProps> = ({
 };
 
 const GridPattern: React.FC = () => (
-  <div className="absolute inset-0 opacity-[0.07] pointer-events-none">
+  // Increased opacity and changed the grid color to black to be visible on a white background
+  <div className="absolute inset-0 opacity-[0.15] pointer-events-none">
     <div
       className="absolute inset-0"
       style={{
         backgroundImage: `
-          linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px)
+          linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px)
         `,
         backgroundSize: "40px 40px",
         maskImage:
@@ -72,7 +91,8 @@ const ParticleField: React.FC = () => {
       {particles.map((p) => (
         <div
           key={p.id}
-          className="absolute w-[2px] h-[2px] bg-white/30 rounded-full animate-twinkle"
+          // Changed particle color from white to a dark gray for visibility
+          className="absolute w-[2px] h-[2px] bg-gray-700/50 rounded-full animate-twinkle"
           style={{
             left: p.left,
             top: p.top,

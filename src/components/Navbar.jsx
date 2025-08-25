@@ -15,16 +15,18 @@ export const Navbar = () => {
     // The main navbar container
     <nav
       className={
-        "fixed top-0 left-1/2 -translate-x-1/2 z-50 w-[90vw] mt-4  rounded-3xl"
+        "fixed top-0 left-1/2 -translate-x-1/2 z-50 w-[90vw] mt-4 rounded-3xl"
       }
     >
       {/* A semi-transparent container with blur for a modern "glassmorphism" effect */}
-      <div className="mx-auto w-full  bg-white/10 bg-opacity-80 backdrop-blur-sm shadow-lg p-4 transition-all duration-300 rounded-md">
+      {/* Changed background and text colors for a white background theme */}
+      <div className="mx-auto w-full bg-white bg-opacity-80 backdrop-blur-sm shadow-lg p-4 transition-all duration-300 rounded-md">
         {/* Flex container for the navbar content */}
         <div className="flex items-center justify-between">
           {/* Logo/Brand Section */}
           <div className="flex items-center space-x-2">
-            <span className="font-posterama text-xl font-bold text-white tracking-wider">
+            {/* Changed text color from white to a dark gray */}
+            <span className="font-posterama text-xl font-bold text-gray-900 tracking-wider">
               XOLVA
             </span>
           </div>
@@ -33,25 +35,25 @@ export const Navbar = () => {
           <div className="hidden md:flex space-x-6">
             <Link
               href="/about"
-              className="text-white hover:text-gray-400 font-medium transition duration-300"
+              className="text-gray-900 hover:text-gray-700 font-medium transition duration-300"
             >
               About
             </Link>
             <a
               href="#"
-              className="text-white hover:text-gray-400 font-medium transition duration-300"
+              className="text-gray-900 hover:text-gray-700 font-medium transition duration-300"
             >
               Services
             </a>
             <a
               href="#"
-              className="text-white hover:text-gray-400 font-medium transition duration-300"
+              className="text-gray-900 hover:text-gray-700 font-medium transition duration-300"
             >
               Portfolio
             </a>
             <a
               href="#"
-              className="text-white hover:text-gray-400 font-medium transition duration-300"
+              className="text-gray-900 hover:text-gray-700 font-medium transition duration-300"
             >
               Contact
             </a>

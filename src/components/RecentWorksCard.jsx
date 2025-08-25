@@ -36,20 +36,17 @@ export function RecentWorks() {
       <FocusCards cards={cards} />
 
       {/* Enhanced View All Work Button - Black & White Theme */}
-      <div className="flex justify-center mt-4 mb-8 ">
-        <Link
-          href={"/portfolio"}
-          className="w-full  flex justify-center mt-16 "
-        >
-          <button className=" cursor-pointer w-full group relative overflow-hidden bg-black hover:bg-gray-900 text-white border-2 border-gray-800 hover:border-white font-semibold px-8 py-4 rounded-md shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 ease-out">
+      <div className="flex justify-center mt-4 mb-8">
+        <Link href={"/portfolio"} className="w-full flex justify-center mt-16">
+          <button className="cursor-pointer w-full group relative overflow-hidden bg-white hover:bg-gray-100 text-gray-800 border-2 border-gray-300 hover:border-gray-500 font-semibold px-8 py-4 rounded-md shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 ease-out">
             {/* Animated background overlay */}
-            <div className="absolute inset-0 bg-gradient-to-r from-white/5 via-gray-300/10 to-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-gray-300/5 via-gray-500/10 to-gray-300/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
             {/* Sparkle effects */}
             <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <Sparkles className="absolute top-1 left-2 w-3 h-3 text-white animate-pulse" />
-              <Sparkles className="absolute bottom-1 right-3 w-2 h-2 text-gray-300 animate-pulse delay-150" />
-              <Sparkles className="absolute top-2 right-8 w-2 h-2 text-white animate-pulse delay-300" />
+              <Sparkles className="absolute top-1 left-2 w-3 h-3 text-gray-500 animate-pulse" />
+              <Sparkles className="absolute bottom-1 right-3 w-2 h-2 text-gray-600 animate-pulse delay-150" />
+              <Sparkles className="absolute top-2 right-8 w-2 h-2 text-gray-700 animate-pulse delay-300" />
             </div>
 
             {/* Button content */}
@@ -59,7 +56,7 @@ export function RecentWorks() {
             </div>
 
             {/* Shine effect */}
-            <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full bg-gradient-to-r from-transparent via-white/30 to-transparent transition-transform duration-700 ease-out"></div>
+            <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full bg-gradient-to-r from-transparent via-gray-400/30 to-transparent transition-transform duration-700 ease-out"></div>
           </button>
         </Link>
       </div>

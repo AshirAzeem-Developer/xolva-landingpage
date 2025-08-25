@@ -1,4 +1,5 @@
-import {
+"use client";
+import React, {
   useState,
   useRef,
   useEffect,
@@ -202,12 +203,12 @@ export const HoverEffect: React.FC<HoverEffectProps> = ({
         );
       })}
 
-      {/* Shared hover background */}
+      {/* Shared hover background - changed to a light color */}
       <AnimatePresence>
         {rect && (
           <motion.div
             layoutId="hoverBackground"
-            className="absolute rounded-3xl bg-neutral-200 dark:bg-slate-800/[0.8] z-10 pointer-events-none"
+            className="absolute rounded-3xl bg-gray-200/[0.8] z-10 pointer-events-none"
             style={{
               top: rect.top,
               left: rect.left,
@@ -233,7 +234,7 @@ export const Card: React.FC<CardProps> = ({ className = "", children }) => {
   return (
     <div
       className={cn(
-        "rounded-2xl h-full w-full p-4 overflow-hidden bg-black border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20 transition-all duration-300 group-hover:scale-[1.02] group-hover:shadow-lg",
+        "rounded-2xl h-full w-full p-4 overflow-hidden bg-gray-50 border border-gray-300 group-hover:border-black relative z-20 transition-all duration-300 group-hover:scale-[1.02] group-hover:shadow-lg",
         className
       )}
     >
@@ -269,7 +270,7 @@ export const CardTitle: React.FC<CardTitleProps> = ({
   return (
     <h4
       className={cn(
-        "text-zinc-100 font-bold tracking-wide text-lg mt-4 transition-colors duration-300 group-hover:text-white",
+        "text-gray-900 font-bold tracking-wide text-lg mt-4 transition-colors duration-300 group-hover:text-gray-900",
         className
       )}
     >
@@ -287,7 +288,7 @@ export const CardDescription: React.FC<CardDescriptionProps> = ({
   return (
     <p
       className={cn(
-        "mt-3 text-zinc-400 tracking-wide leading-relaxed text-sm transition-colors duration-300 group-hover:text-zinc-300 max-w-sm mx-auto",
+        "mt-3 text-gray-700 tracking-wide leading-relaxed text-sm transition-colors duration-300 group-hover:text-gray-800 max-w-sm mx-auto",
         className
       )}
     >
