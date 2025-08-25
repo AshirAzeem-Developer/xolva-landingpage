@@ -1,5 +1,6 @@
 import React from "react";
 import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin } from "lucide-react";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -25,18 +26,18 @@ const Footer = () => {
               >
                 About
               </a>
-              <a
-                href="#"
+              <Link
+                href="/our-services"
                 className="text-gray-300 hover:text-white transition-colors duration-200"
               >
                 Services
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                href="/portfolio"
                 className="text-gray-300 hover:text-white transition-colors duration-200"
               >
                 Portfolio
-              </a>
+              </Link>
               <a
                 href="#"
                 className="text-gray-300 hover:text-white transition-colors duration-200"

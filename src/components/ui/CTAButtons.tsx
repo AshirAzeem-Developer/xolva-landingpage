@@ -6,10 +6,13 @@ const CTAButtons: React.FC = () => (
   <>
     {/* Primary CTA buttons */}
     <div className="flex flex-col sm:flex-row gap-2">
-      <button className="group flex items-center justify-center px-8 py-4 bg-gradient-to-r from-white to-gray-200 text-black font-semibold hover:from-gray-100 hover:to-white transition-all duration-300 transform hover:scale-105 rounded-full shadow-lg hover:shadow-white/25">
+      <Link
+        href={"/contact-us"}
+        className="group flex items-center justify-center px-8 py-4 bg-gradient-to-r from-white to-gray-200 text-black font-semibold hover:from-gray-100 hover:to-white transition-all duration-300 transform hover:scale-105 rounded-full shadow-lg hover:shadow-white/25"
+      >
         Get Custom Quote
         <Quote className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform duration-300" />
-      </button>
+      </Link>
 
       {/* <button className="flex items-center justify-center px-8 py-4 border-2 border-gray-400 rounded-full text-white hover:border-white hover:text-gray-200 transition-all duration-300 backdrop-blur-sm">
         <Globe className="w-5 h-5 mr-2" />
